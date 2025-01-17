@@ -1286,6 +1286,7 @@ struct whisper_state
 
 #ifdef WHISPER_USE_COREML
     whisper_coreml_context *ctx_coreml = nullptr;
+    bool use_coreml = true;
 #endif
 
 #ifdef WHISPER_USE_OPENVINO
@@ -3095,6 +3096,12 @@ static struct ggml_cgraph *whisper_build_graph_decoder(
 
     const float KQscale = pow(float(n_state_head), -0.25);
 
+#ifndef WHISPER_USE_COREML
+    const bool use_coreml = false;
+#else
+    const bool use_coreml = wstate.ctx_coreml != nullptr && wstate.use_coreml;
+#endif
+
     struct ggml_tensor *KQ_mask = ggml_new_tensor_3d(ctx0, GGML_TYPE_F32, n_kv, n_tokens, 1);
     ggml_set_name(KQ_mask, "KQ_mask");
     ggml_set_input(KQ_mask);
@@ -4053,6 +4060,11 @@ static std::string whisper_openvino_get_path_cache(std::string path_bin)
 
 struct whisper_state *whisper_init_state(whisper_context *ctx)
 {
+    return whisper_init_state_with_coreml(ctx, false);
+}
+
+struct whisper_state *whisper_init_state_with_coreml(whisper_context *ctx, bool use_coreml)
+{
     whisper_state *state = new whisper_state;
 
     state->backends = whisper_backend_init(ctx->params);
@@ -4125,23 +4137,28 @@ struct whisper_state *whisper_init_state(whisper_context *ctx)
     }
 
 #ifdef WHISPER_USE_COREML
-    const auto path_coreml = whisper_get_coreml_path_encoder(ctx->path_model);
+    state->use_coreml = use_coreml;
 
-    WHISPER_LOG_INFO("%s: loading Core ML model from '%s'\n", __func__, path_coreml.c_str());
-    WHISPER_LOG_INFO("%s: first run on a device may take a while ...\n", __func__);
-
-    state->ctx_coreml = whisper_coreml_init(path_coreml.c_str());
-    if (!state->ctx_coreml)
+    if (use_coreml)
     {
-        WHISPER_LOG_ERROR("%s: failed to load Core ML model from '%s'\n", __func__, path_coreml.c_str());
+        const auto path_coreml = whisper_get_coreml_path_encoder(ctx->path_model);
+
+        WHISPER_LOG_INFO("%s: loading Core ML model from '%s'\n", __func__, path_coreml.c_str());
+        WHISPER_LOG_INFO("%s: first run on a device may take a while ...\n", __func__);
+
+        state->ctx_coreml = whisper_coreml_init(path_coreml.c_str());
+        if (!state->ctx_coreml)
+        {
+            WHISPER_LOG_ERROR("%s: failed to load Core ML model from '%s'\n", __func__, path_coreml.c_str());
 #ifndef WHISPER_COREML_ALLOW_FALLBACK
-        whisper_free_state(state);
-        return nullptr;
+            whisper_free_state(state);
+            return nullptr;
 #endif
-    }
-    else
-    {
-        WHISPER_LOG_INFO("%s: Core ML model loaded\n", __func__);
+        }
+        else
+        {
+            WHISPER_LOG_INFO("%s: Core ML model loaded\n", __func__);
+        }
     }
 #endif
 
@@ -4459,13 +4476,18 @@ struct whisper_context *whisper_init_with_params_no_state(struct whisper_model_l
 
 struct whisper_context *whisper_init_from_file_with_params(const char *path_model, struct whisper_context_params params)
 {
+    return whisper_init_from_file_with_params_with_coreml(path_model, params, false);
+}
+
+struct whisper_context *whisper_init_from_file_with_params_with_coreml(const char *path_model, struct whisper_context_params params, bool use_coreml)
+{
     whisper_context *ctx = whisper_init_from_file_with_params_no_state(path_model, params);
     if (!ctx)
     {
         return nullptr;
     }
 
-    ctx->state = whisper_init_state(ctx);
+    ctx->state = whisper_init_state_with_coreml(ctx, use_coreml);
     if (!ctx->state)
     {
         whisper_free(ctx);
