@@ -459,6 +459,9 @@ extern "C" {
     // If it returns false, the computation is aborted
     typedef bool (*whisper_encoder_begin_callback)(struct whisper_context * ctx, struct whisper_state * state, void * user_data);
 
+    // Language detected callback
+    typedef void (*whisper_language_detected_callback)(struct whisper_context * ctx, struct whisper_state * state, int lang_id, void * user_data);
+
     // Logits filter callback
     // Can be used to modify the logits before sampling
     // If not NULL, called after applying temperature to logits
@@ -570,6 +573,10 @@ extern "C" {
         size_t                           n_grammar_rules;
         size_t                           i_start_rule;
         float                            grammar_penalty;
+
+        // called when a language is detected
+        whisper_language_detected_callback language_detected_callback;
+        void * language_detected_callback_user_data;
     };
 
     // NOTE: this function allocates memory, and it is the responsibility of the caller to free the pointer - see whisper_free_context_params & whisper_free_params()
