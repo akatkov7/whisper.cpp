@@ -878,6 +878,7 @@ struct whisper_state {
     std::string path_model; // populated by whisper_init_from_file_with_params()
 
 #ifdef WHISPER_USE_COREML
+    bool use_coreml = true;
     whisper_coreml_context * ctx_coreml = nullptr;
 #endif
 
@@ -2458,6 +2459,12 @@ static struct ggml_cgraph * whisper_build_graph_decoder(
     ggml_set_input(position);
 
     const float KQscale = pow(float(n_state_head), -0.25);
+     
+#ifndef WHISPER_USE_COREML
+    const bool use_coreml = false;
+#else
+    const bool use_coreml = wstate.ctx_coreml != nullptr && wstate.use_coreml;
+#endif
 
     struct ggml_tensor * KQ_mask = ggml_new_tensor_3d(ctx0, GGML_TYPE_F32, n_kv, GGML_PAD(n_tokens, GGML_KQ_MASK_PAD), 1);
     ggml_set_name(KQ_mask, "KQ_mask");
@@ -3326,6 +3333,10 @@ static std::string whisper_openvino_get_path_cache(std::string path_bin) {
 #endif
 
 struct whisper_state * whisper_init_state(whisper_context * ctx) {
+    return whisper_init_state_with_coreml(ctx, false);
+}
+
+struct whisper_state * whisper_init_state_with_coreml(whisper_context * ctx, bool use_coreml) {
     whisper_state * state = new whisper_state;
 
     state->backends = whisper_backend_init(ctx->params);
@@ -3392,6 +3403,9 @@ struct whisper_state * whisper_init_state(whisper_context * ctx) {
     }
 
 #ifdef WHISPER_USE_COREML
+    state->use_coreml = use_coreml;
+    
+    if (use_coreml) {
     const auto path_coreml = whisper_get_coreml_path_encoder(ctx->path_model);
 
     WHISPER_LOG_INFO("%s: loading Core ML model from '%s'\n", __func__, path_coreml.c_str());
@@ -3406,6 +3420,7 @@ struct whisper_state * whisper_init_state(whisper_context * ctx) {
 #endif
     } else {
         WHISPER_LOG_INFO("%s: Core ML model loaded\n", __func__);
+    }
     }
 #endif
 
@@ -3688,12 +3703,16 @@ struct whisper_context * whisper_init_with_params_no_state(struct whisper_model_
 }
 
 struct whisper_context * whisper_init_from_file_with_params(const char * path_model, struct whisper_context_params params) {
+    return whisper_init_from_file_with_params_with_coreml(path_model, params, false);
+}
+
+struct whisper_context * whisper_init_from_file_with_params_with_coreml(const char * path_model, struct whisper_context_params params, bool use_coreml) {
     whisper_context * ctx = whisper_init_from_file_with_params_no_state(path_model, params);
     if (!ctx) {
         return nullptr;
     }
 
-    ctx->state = whisper_init_state(ctx);
+    ctx->state = whisper_init_state_with_coreml(ctx, use_coreml);
     if (!ctx->state) {
         whisper_free(ctx);
         return nullptr;
