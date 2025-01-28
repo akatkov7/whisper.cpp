@@ -64,36 +64,36 @@
 /* Begin PBXFileReference section */
 		31319A252D40862F00544D16 /* whisper_submodule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = whisper_submodule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31319A302D40B99600544D16 /* whisper_submodule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = whisper_submodule.h; sourceTree = "<group>"; };
-		31319A6D2D40BB7B00544D16 /* ggml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ggml.h; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/include/ggml.h"; sourceTree = "<absolute>"; };
-		31319A6E2D40BB7B00544D16 /* ggml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ggml.c; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml.c"; sourceTree = "<absolute>"; };
-		31319A712D40BCAC00544D16 /* ggml-alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-alloc.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/include/ggml-alloc.h"; sourceTree = "<absolute>"; };
-		31319A722D40BCAC00544D16 /* ggml-alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-alloc.c"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-alloc.c"; sourceTree = "<absolute>"; };
-		31319A732D40BCAC00544D16 /* ggml-backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-backend.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/include/ggml-backend.h"; sourceTree = "<absolute>"; };
-		31319A742D40BCAC00544D16 /* ggml-backend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-backend.cpp"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-backend.cpp"; sourceTree = "<absolute>"; };
-		31319A752D40BCAC00544D16 /* ggml-backend-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-backend-impl.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-backend-impl.h"; sourceTree = "<absolute>"; };
-		31319A762D40BCAC00544D16 /* ggml-backend-reg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-backend-reg.cpp"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-backend-reg.cpp"; sourceTree = "<absolute>"; };
-		31319A772D40BCAC00544D16 /* ggml-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-common.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-common.h"; sourceTree = "<absolute>"; };
-		31319A782D40BCAC00544D16 /* ggml-cpu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/include/ggml-cpu.h"; sourceTree = "<absolute>"; };
-		31319A792D40BCAC00544D16 /* ggml-cpu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-cpu.c"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.c"; sourceTree = "<absolute>"; };
-		31319A7A2D40BCAC00544D16 /* ggml-cpu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-cpu.cpp"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu.cpp"; sourceTree = "<absolute>"; };
-		31319A7B2D40BCAC00544D16 /* ggml-cpu-aarch64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-aarch64.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-aarch64.h"; sourceTree = "<absolute>"; };
-		31319A7C2D40BCAC00544D16 /* ggml-cpu-aarch64.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-cpu-aarch64.cpp"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-aarch64.cpp"; sourceTree = "<absolute>"; };
-		31319A7D2D40BCAC00544D16 /* ggml-cpu-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-impl.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-impl.h"; sourceTree = "<absolute>"; };
-		31319A7E2D40BCAC00544D16 /* ggml-cpu-quants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-quants.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-quants.h"; sourceTree = "<absolute>"; };
-		31319A7F2D40BCAC00544D16 /* ggml-cpu-quants.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-cpu-quants.c"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-quants.c"; sourceTree = "<absolute>"; };
-		31319A802D40BCAC00544D16 /* ggml-cpu-traits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-traits.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-traits.h"; sourceTree = "<absolute>"; };
-		31319A812D40BCAC00544D16 /* ggml-cpu-traits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-cpu-traits.cpp"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-cpu/ggml-cpu-traits.cpp"; sourceTree = "<absolute>"; };
-		31319A822D40BCAC00544D16 /* ggml-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-impl.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-impl.h"; sourceTree = "<absolute>"; };
-		31319A832D40BCAC00544D16 /* ggml-metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-metal.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/include/ggml-metal.h"; sourceTree = "<absolute>"; };
-		31319A842D40BCAC00544D16 /* ggml-metal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ggml-metal.m"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-metal/ggml-metal.m"; sourceTree = "<absolute>"; };
-		31319A852D40BCAC00544D16 /* ggml-metal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = "ggml-metal.metal"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-metal/ggml-metal.metal"; sourceTree = "<absolute>"; };
-		31319A862D40BCAC00544D16 /* ggml-quants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-quants.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-quants.h"; sourceTree = "<absolute>"; };
-		31319A872D40BCAC00544D16 /* ggml-quants.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-quants.c"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-quants.c"; sourceTree = "<absolute>"; };
-		31319A882D40BCAC00544D16 /* ggml-threading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-threading.h"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-threading.h"; sourceTree = "<absolute>"; };
-		31319A892D40BCAC00544D16 /* ggml-threading.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-threading.cpp"; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/ggml-threading.cpp"; sourceTree = "<absolute>"; };
-		31319A8A2D40BCAC00544D16 /* gguf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gguf.h; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/include/gguf.h"; sourceTree = "<absolute>"; };
-		31319A8B2D40BCAC00544D16 /* gguf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gguf.cpp; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/ggml/src/gguf.cpp"; sourceTree = "<absolute>"; };
-		31319AA82D40BCF000544D16 /* whisper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = whisper.cpp; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/src/whisper.cpp"; sourceTree = "<absolute>"; };
+		31319A6D2D40BB7B00544D16 /* ggml.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ggml.h; path = ../../ggml/include/ggml.h; sourceTree = SOURCE_ROOT; };
+		31319A6E2D40BB7B00544D16 /* ggml.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = ggml.c; path = ../../ggml/src/ggml.c; sourceTree = SOURCE_ROOT; };
+		31319A712D40BCAC00544D16 /* ggml-alloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-alloc.h"; path = "../../ggml/include/ggml-alloc.h"; sourceTree = SOURCE_ROOT; };
+		31319A722D40BCAC00544D16 /* ggml-alloc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-alloc.c"; path = "../../ggml/src/ggml-alloc.c"; sourceTree = SOURCE_ROOT; };
+		31319A732D40BCAC00544D16 /* ggml-backend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-backend.h"; path = "../../ggml/include/ggml-backend.h"; sourceTree = SOURCE_ROOT; };
+		31319A742D40BCAC00544D16 /* ggml-backend.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-backend.cpp"; path = "../../ggml/src/ggml-backend.cpp"; sourceTree = SOURCE_ROOT; };
+		31319A752D40BCAC00544D16 /* ggml-backend-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-backend-impl.h"; path = "../../ggml/src/ggml-backend-impl.h"; sourceTree = SOURCE_ROOT; };
+		31319A762D40BCAC00544D16 /* ggml-backend-reg.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-backend-reg.cpp"; path = "../../ggml/src/ggml-backend-reg.cpp"; sourceTree = SOURCE_ROOT; };
+		31319A772D40BCAC00544D16 /* ggml-common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-common.h"; path = "../../ggml/src/ggml-common.h"; sourceTree = SOURCE_ROOT; };
+		31319A782D40BCAC00544D16 /* ggml-cpu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu.h"; path = "../../ggml/include/ggml-cpu.h"; sourceTree = SOURCE_ROOT; };
+		31319A792D40BCAC00544D16 /* ggml-cpu.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-cpu.c"; path = "../../ggml/src/ggml-cpu/ggml-cpu.c"; sourceTree = SOURCE_ROOT; };
+		31319A7A2D40BCAC00544D16 /* ggml-cpu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-cpu.cpp"; path = "../../ggml/src/ggml-cpu/ggml-cpu.cpp"; sourceTree = SOURCE_ROOT; };
+		31319A7B2D40BCAC00544D16 /* ggml-cpu-aarch64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-aarch64.h"; path = "../../ggml/src/ggml-cpu/ggml-cpu-aarch64.h"; sourceTree = SOURCE_ROOT; };
+		31319A7C2D40BCAC00544D16 /* ggml-cpu-aarch64.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-cpu-aarch64.cpp"; path = "../../ggml/src/ggml-cpu/ggml-cpu-aarch64.cpp"; sourceTree = SOURCE_ROOT; };
+		31319A7D2D40BCAC00544D16 /* ggml-cpu-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-impl.h"; path = "../../ggml/src/ggml-cpu/ggml-cpu-impl.h"; sourceTree = SOURCE_ROOT; };
+		31319A7E2D40BCAC00544D16 /* ggml-cpu-quants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-quants.h"; path = "../../ggml/src/ggml-cpu/ggml-cpu-quants.h"; sourceTree = SOURCE_ROOT; };
+		31319A7F2D40BCAC00544D16 /* ggml-cpu-quants.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-cpu-quants.c"; path = "../../ggml/src/ggml-cpu/ggml-cpu-quants.c"; sourceTree = SOURCE_ROOT; };
+		31319A802D40BCAC00544D16 /* ggml-cpu-traits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-cpu-traits.h"; path = "../../ggml/src/ggml-cpu/ggml-cpu-traits.h"; sourceTree = SOURCE_ROOT; };
+		31319A812D40BCAC00544D16 /* ggml-cpu-traits.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-cpu-traits.cpp"; path = "../../ggml/src/ggml-cpu/ggml-cpu-traits.cpp"; sourceTree = SOURCE_ROOT; };
+		31319A822D40BCAC00544D16 /* ggml-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-impl.h"; path = "../../ggml/src/ggml-impl.h"; sourceTree = SOURCE_ROOT; };
+		31319A832D40BCAC00544D16 /* ggml-metal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-metal.h"; path = "../../ggml/include/ggml-metal.h"; sourceTree = SOURCE_ROOT; };
+		31319A842D40BCAC00544D16 /* ggml-metal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "ggml-metal.m"; path = "../../ggml/src/ggml-metal/ggml-metal.m"; sourceTree = SOURCE_ROOT; };
+		31319A852D40BCAC00544D16 /* ggml-metal.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; name = "ggml-metal.metal"; path = "../../ggml/src/ggml-metal/ggml-metal.metal"; sourceTree = SOURCE_ROOT; };
+		31319A862D40BCAC00544D16 /* ggml-quants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-quants.h"; path = "../../ggml/src/ggml-quants.h"; sourceTree = SOURCE_ROOT; };
+		31319A872D40BCAC00544D16 /* ggml-quants.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = "ggml-quants.c"; path = "../../ggml/src/ggml-quants.c"; sourceTree = SOURCE_ROOT; };
+		31319A882D40BCAC00544D16 /* ggml-threading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "ggml-threading.h"; path = "../../ggml/src/ggml-threading.h"; sourceTree = SOURCE_ROOT; };
+		31319A892D40BCAC00544D16 /* ggml-threading.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "ggml-threading.cpp"; path = "../../ggml/src/ggml-threading.cpp"; sourceTree = SOURCE_ROOT; };
+		31319A8A2D40BCAC00544D16 /* gguf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = gguf.h; path = ../../ggml/include/gguf.h; sourceTree = SOURCE_ROOT; };
+		31319A8B2D40BCAC00544D16 /* gguf.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = gguf.cpp; path = ../../ggml/src/gguf.cpp; sourceTree = SOURCE_ROOT; };
+		31319AA82D40BCF000544D16 /* whisper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = whisper.cpp; path = ../../src/whisper.cpp; sourceTree = SOURCE_ROOT; };
 		31319AAB2D40BD1500544D16 /* whisper-decoder-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whisper-decoder-impl.h"; sourceTree = "<group>"; };
 		31319AAC2D40BD1500544D16 /* whisper-decoder-impl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "whisper-decoder-impl.m"; sourceTree = "<group>"; };
 		31319AAD2D40BD1500544D16 /* whisper-encoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whisper-encoder.h"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		31319AAF2D40BD1500544D16 /* whisper-encoder-impl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whisper-encoder-impl.h"; sourceTree = "<group>"; };
 		31319AB02D40BD1500544D16 /* whisper-encoder-impl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "whisper-encoder-impl.m"; sourceTree = "<group>"; };
 		314F0D6B2D43127A00F83B3E /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.2.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
-		3184D45B2D40C64C00C044D0 /* whisper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = whisper.h; path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/include/whisper.h"; sourceTree = "<absolute>"; };
+		3184D45B2D40C64C00C044D0 /* whisper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = whisper.h; path = ../../include/whisper.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +183,8 @@
 				31319AB02D40BD1500544D16 /* whisper-encoder-impl.m */,
 			);
 			name = coreml;
-			path = "/Users/akatkov/Documents/whisper-repos/forked-whisper.cpp/src/coreml";
-			sourceTree = "<absolute>";
+			path = ../../src/coreml;
+			sourceTree = SOURCE_ROOT;
 		};
 		314F0D6A2D43127A00F83B3E /* Frameworks */ = {
 			isa = PBXGroup;
